@@ -1,5 +1,5 @@
 import components from './components'
-import store from './store'
+import store from './store/'
 import routes from './routes'
 import Default from './layout/Default'
 import Blank from './layout/Blank'

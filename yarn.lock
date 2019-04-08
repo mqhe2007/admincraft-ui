@@ -1659,10 +1659,10 @@ acorn@^6.0.5:
   resolved "https://registry.yarnpkg.com/acorn/-/acorn-6.1.1.tgz#7d25ae05bb8ad1f9b699108e1094ecd7884adc1f"
   integrity sha512-jPTiwtOxaHNaAPg/dmrJ/beuzLRnXtB0kQPQ8JpotKJgTB6rX6c8mlf315941pyjBSaPg8NHXS9fhP4u17DpGA==
 
-admincraft@^0.5.0-alpha:
-  version "0.5.0-alpha"
-  resolved "https://registry.yarnpkg.com/admincraft/-/admincraft-0.5.0-alpha.tgz#07048272730d0a0f9614ae3812a168a8879f67e7"
-  integrity sha512-2GecDdwCGY6cYXuokk1EHxGPee9njoGOoREm/iEQGdeh6E7zREBSfn7hwGy6b76Gux9CxLUE2sKB06YhRl867g==
+admincraft@^0.5.1-alpha:
+  version "0.5.1-alpha"
+  resolved "https://registry.yarnpkg.com/admincraft/-/admincraft-0.5.1-alpha.tgz#ce231c3364c77560966aff395bf21ef2cf360b12"
+  integrity sha512-hjB9rf41DYWJQj6EZtFb58HHx1ZEV8vomPULSBBN/XZvwx3eU4N7FfvACyG8b8VANEuSbZZSMjAogLiQBFBhbw==
   dependencies:
     "@babel/polyfill" "^7.4.3"
     axios "^0.18.0"

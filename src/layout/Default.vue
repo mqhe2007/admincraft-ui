@@ -9,7 +9,7 @@
       <CHeader></CHeader>
       <CTabBar></CTabBar>
       <div class="has-padding ac-router-view">
-        <router-view class="has-padding has-background-white has-shadow"></router-view>
+        <router-view class="has-padding"></router-view>
       </div>
       <CFooter></CFooter>
       <CNoticeCenter></CNoticeCenter>
@@ -47,6 +47,5 @@ export default {
 .ac-router-view
   flex auto
   height 0
-  background darken(white, 5)
   overflow auto
 </style>
