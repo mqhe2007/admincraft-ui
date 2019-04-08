@@ -5,8 +5,7 @@ export default [
     name: 'home',
     meta: {
       NonMenu: true,
-      title: '首页',
-      layout: 'acDefault'
+      title: '首页'
     },
     component: Home
   }
