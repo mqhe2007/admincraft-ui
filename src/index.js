@@ -4,15 +4,18 @@ import routes from './routes'
 import Default from './layout/Default'
 import Blank from './layout/Blank'
 import './style/index.styl'
-export default Vue => {
+export default (app, Vue) => {
   for (const key in components) {
     Vue.component(key, components[key])
   }
-  Vue.prototype.$addLayout({
-    Default,
-    Blank
+  app.$addLayout({
+    layoutDefault: Default,
+    layoutBlank: Blank
   })
-  Vue.prototype.$addStore('ui', store)
-  Vue.prototype.$addRoutes(routes)
-  console.log('ui加载完成')
+  app.$addStore('ui', store)
+  app.$addRoutes(routes)
+  console.log(
+    `%cadmincraft-ui 加载完成`,
+    'background: #00d1b2; padding: 5px; color: #fff; border-radius: 5px'
+  )
 }
