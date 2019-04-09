@@ -20,12 +20,6 @@ export default {
   data: () => ({
     closeTimer: null
   }),
-  created() {
-    this.$store.commit('noticeCenter/addNotice', {
-      title: this.title,
-      content: this.content
-    })
-  },
   mounted() {
     this.closeTimer = setTimeout(() => {
       this.close()
@@ -39,7 +33,7 @@ export default {
   },
   methods: {
     close() {
-      this.$notice.close(this.$root)
+      this.$Notice.close(this.$root)
     }
   }
 }

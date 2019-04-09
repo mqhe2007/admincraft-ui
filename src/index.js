@@ -1,17 +1,17 @@
-import components from './components'
+import components from './components/'
+import global from './global/'
+import layout from './layout/'
 import store from './store/'
 import routes from './routes'
-import Default from './layout/Default'
-import Blank from './layout/Blank'
 import './style/index.styl'
 export default (app, Vue) => {
   for (const key in components) {
     Vue.component(key, components[key])
   }
-  app.$addLayout({
-    layoutDefault: Default,
-    layoutBlank: Blank
-  })
+  for (const key in global) {
+    Vue.use(global[key])
+  }
+  app.$addLayout(layout)
   app.$addStore('ui', store)
   app.$addRoutes(routes)
   console.log(

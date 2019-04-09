@@ -77,7 +77,8 @@ module.exports = {
     new CleanWebpackPlugin(),
     new VueLoaderPlugin(),
     new HtmlWebpackPlugin({
-      title: '加载中……'
+      title: '加载中……',
+      template: 'dev/index.html'
     })
   ]
 }

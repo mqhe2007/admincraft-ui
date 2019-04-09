@@ -33,7 +33,7 @@ export default {
   },
   methods: {
     close() {
-      this.$dialog.close(this.$root)
+      this.$Dialog.close(this.$root)
     }
   }
 }

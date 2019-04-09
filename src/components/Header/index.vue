@@ -23,13 +23,13 @@ export default {
   created() {
     // this.$options.components
     this.$eventBus.on('showCase/event/demo1', data => {
-      this.$notice.open({
+      this.$Notice.open({
         title: '监听到一个实时事件',
         content: data
       })
     })
     this.$eventBus.on('showCase/event/demo2', data => {
-      this.$notice.open({
+      this.$Notice.open({
         title: '监听到一个异步事件',
         content: data
       })
