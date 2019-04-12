@@ -3,13 +3,10 @@
        :class="{'ac-menu-item-end': isEnd, 'ac-menu-item-active': itemData.active}">
     <div class="ac-menu-item-title"
          @click="clickTitle">
-      <span v-if="itemData.icon"
-            class="ac-menu-item-icon"
-            :style="{backgroundImage: `url(${itemData.active? itemData.icon[0] : itemData.icon[1]})`}"></span>
-      <Icon v-else
-            icon="certificate"></Icon>
+      <fa-icon :icon="itemData.icon ? itemData.icon : 'certificate'"
+            class="ac-menu-item-icon"></Icon>
       <span class="ac-menu-item-text">{{itemData.title}}</span>
-      <Icon v-if="!isEnd"
+      <fa-icon v-if="!isEnd"
             icon="chevron-down"
             class="ac-menu-item-indicator" />
     </div>
@@ -62,60 +59,57 @@ export default {
 <style lang="stylus">
 .ac-menu-item
   .ac-menu-item-title
-    padding: 12px 24px
-    display: flex
-    justify-content: flex-start
-    align-items: center
-    cursor: pointer
-    color: #fff
-    font-size: 16px
+    padding 12px 24px
+    display flex
+    justify-content flex-start
+    align-items center
+    cursor pointer
+    color #fff
+    font-size 16px
 
     .ac-menu-item-icon
-      flex: 0 0 32px
-      height: 32px
-      border-radius: 50%
-      background: center no-repeat
-      background-size: contain
+      flex 0 0 25px
+      height 25px
+      border-radius 50%
+      background center no-repeat
+      background-size contain
+
     .ac-menu-item-text
-      flex: auto
-      margin-left: 16px
+      flex auto
+      margin-left 16px
 
     .ac-menu-item-indicator
-      font-size: 12px
-      transition: transform 0.3s
+      font-size 12px
+      transition transform 0.3s
 
   .ac-menu-item-submenu
-    display: none
+    display none
 
   &:hover
-    background: darken(primary, 5%)
+    background darken(primary, 5%)
 
   &.ac-menu-item-active
-    background: darken(primary, 10%)
+    background darken(primary, 10%)
 
     .ac-menu-item-title
-      color: #fff
+      color #fff
 
       .ac-menu-item-indicator
-        transform: rotateZ(180deg)
+        transform rotateZ(180deg)
 
     .ac-menu-item-submenu
-      display: block
+      display block
 
       .ac-menu-item
         &:hover
-          background: darken(primary, 15%)
+          background darken(primary, 15%)
 
       .ac-menu-item-title
-        color: #fff
-
-        &:hover
-          color: #fff
+        color #fff
 
   &.ac-menu-item-end.ac-menu-item-active
     .ac-menu-item-title
-      padding-left: 20px
-      background: #fff
-      color: primary
+      background #fff
+      color primary
 </style>
 

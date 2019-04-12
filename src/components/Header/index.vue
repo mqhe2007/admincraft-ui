@@ -1,7 +1,7 @@
 <template>
   <div class="ac-header is-flex is-between">
     <div class="ac-sidebar-toggle">
-      <Icon icon="stream"
+      <fa-icon icon="stream"
             @click="toggleSidebarFold" />
     </div>
     <div class="is-flex is-center ac-sidebar-slot">

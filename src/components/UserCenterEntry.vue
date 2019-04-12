@@ -2,7 +2,7 @@
   <!-- 用户信息面板 -->
   <div class="userCenterEntry">
     <div class="is-flex is-center avatar">
-      <Icon icon="user-circle" class="is-size-3"/>
+      <fa-icon icon="user-circle" class="is-size-3"/>
       <p>{{$store.state.user.info.userName}}</p>
     </div>
     <div class="panel has-shadow">

@@ -11,7 +11,7 @@ module.exports = {
     filename: 'main.js',
     path: path.resolve(__dirname, 'dist'),
     publicPath: process.env.NODE_ENV === 'production' ? './' : '',
-    library: 'Admincraft',
+    library: 'ui',
     // libraryExport: 'default',
     libraryTarget: 'umd',
     umdNamedDefine: true
@@ -26,7 +26,8 @@ module.exports = {
     extensions: ['.js', '.vue']
   },
   devServer: {
-    contentBase: './dist'
+    contentBase: './dist',
+    stats: 'errors-only'
   },
   module: {
     rules: [

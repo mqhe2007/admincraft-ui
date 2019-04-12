@@ -33,7 +33,7 @@
               <div v-if="item.icon"
                    class="ac-mainmenu-mini-icon"
                    :style="{backgroundImage: `url(${item.active? item.icon[0] : item.icon[1]})`}"></div>
-              <Icon v-else
+              <fa-icon v-else
                     icon="certificate"></Icon>
             </div>
             <template v-slot:content>

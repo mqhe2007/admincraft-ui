@@ -12,7 +12,7 @@
           {{tab.meta.title || '未命名页面'}}
           <span class="ac-tab-bar-close"
                 @click.stop="deleteOne(tab)">
-                <Icon icon="times"></Icon>
+                <fa-icon icon="times"></Icon>
           </span>
         </div>
       </div>
@@ -20,7 +20,7 @@
         <span class="item"
               @click="clearTabs"
               title="删除全部">
-          <Icon icon="broom"></Icon>
+          <fa-icon icon="broom"></Icon>
         </span>
       </div>
     </div>
