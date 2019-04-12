@@ -1,7 +1,8 @@
 import Admincraft from 'admincraft'
+import admincraftShowcase from 'admincraft-showcase'
 import UI from '../src/'
 Admincraft.add(UI)
-Admincraft.add(showcase)
+Admincraft.add(admincraftShowcase)
 Admincraft.use(Vue => {
   Vue.config.devtools = true
 })

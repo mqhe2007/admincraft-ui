@@ -19,7 +19,7 @@ export default {
 
 <style lang="stylus">
 .ac-sidebar
-  width 200px
+  flex 0 0 200px
   height 100vh
   transition all 0.3s
 
