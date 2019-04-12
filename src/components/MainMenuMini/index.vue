@@ -34,7 +34,7 @@
                    class="ac-mainmenu-mini-icon"
                    :style="{backgroundImage: `url(${item.active? item.icon[0] : item.icon[1]})`}"></div>
               <fa-icon v-else
-                    icon="certificate"></Icon>
+                    icon="certificate"></fa-icon>
             </div>
             <template v-slot:content>
               <div class="ac-mainmenu-mini-submenu">

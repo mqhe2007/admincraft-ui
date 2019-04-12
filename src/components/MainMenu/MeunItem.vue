@@ -4,7 +4,7 @@
     <div class="ac-menu-item-title"
          @click="clickTitle">
       <fa-icon :icon="itemData.icon ? itemData.icon : 'certificate'"
-            class="ac-menu-item-icon"></Icon>
+            class="ac-menu-item-icon"></fa-icon>
       <span class="ac-menu-item-text">{{itemData.title}}</span>
       <fa-icon v-if="!isEnd"
             icon="chevron-down"
