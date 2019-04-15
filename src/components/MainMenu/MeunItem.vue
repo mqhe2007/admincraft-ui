@@ -65,11 +65,11 @@ export default {
     align-items center
     cursor pointer
     color #fff
-    font-size 16px
+    font-size 14px
 
     .ac-menu-item-icon
-      flex 0 0 25px
-      height 25px
+      flex 0 0 18px
+      height 18px
       border-radius 50%
       background center no-repeat
       background-size contain
