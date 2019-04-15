@@ -1,8 +1,8 @@
 <template>
   <div class="ac-tab-bar">
     <div class="ac-tab-bar-wrapper"
-         id="tabBarScrollWrapper">
-      <div id="tabBarContent"
+         ref="tabBarScrollWrapper">
+      <div ref="tabBarContent"
            class="ac-tab-bar-content">
         <div v-for="tab in tabs"
              class="ac-tab-bar-item"
@@ -12,7 +12,7 @@
           {{tab.meta.title || '未命名页面'}}
           <span class="ac-tab-bar-close"
                 @click.stop="deleteOne(tab)">
-                <fa-icon icon="times"></fa-icon>
+            <fa-icon icon="times"></fa-icon>
           </span>
         </div>
       </div>
@@ -57,8 +57,8 @@ export default {
     tabs() {
       this.$nextTick(() => {
         let scrollX =
-          document.querySelector('#tabBarScrollWrapper').offsetWidth -
-          document.querySelector('#tabBarContent').offsetWidth
+          this.$refs.tabBarScrollWrapper.offsetWidth -
+          this.$refs.tabBarContent.offsetWidth
         this.scroll.refresh()
         this.scroll.scrollTo(scrollX > 0 ? 0 : scrollX, 0, 300)
       })
@@ -71,18 +71,15 @@ export default {
   },
   mounted() {
     this.$nextTick(() => {
-      this.scroll = new this.$Scroll(
-        document.querySelector('#tabBarScrollWrapper'),
-        {
-          click: true,
-          scrollX: true,
-          scrollY: false,
-          mouseWheel: {
-            speed: 1,
-            easeTime: 1000
-          }
+      this.scroll = new this.$Scroll(this.$refs.tabBarScrollWrapper, {
+        click: true,
+        scrollX: true,
+        scrollY: false,
+        mouseWheel: {
+          speed: 1,
+          easeTime: 1000
         }
-      )
+      })
     })
   },
   methods: {
@@ -118,59 +115,59 @@ export default {
 </script>
 <style lang="stylus">
 .ac-tab-bar
-  height: 35px
-  width: 100%
-  background: #eee
+  height 35px
+  width 100%
+  background #eee
 
   .ac-tab-bar-wrapper
-    display: flex
-    flex: auto
-    height: 100%
-    white-space: nowrap
-    overflow: hidden
-    position: relative
+    display flex
+    width 100%
+    height 100%
+    white-space nowrap
+    overflow hidden
+    position relative
 
     .ac-tab-bar-content
-      display: flex
-      align-items: flex-end
-      height: 100%
-      padding-right: 100px
+      display flex
+      align-items flex-end
+      height 100%
+      padding-right 100px
 
       .ac-tab-bar-item
-        font-size: 13px
-        padding: 6px 15px 5px 15px
-        border-radius: 6px 6px 0 0
-        cursor: pointer
-        user-select: none
-        border-right: 1px solid #ddd
+        font-size 13px
+        padding 6px 15px 5px 15px
+        border-radius 6px 6px 0 0
+        cursor pointer
+        user-select none
+        border-right 1px solid #ddd
 
         &:hover
-          background: #f5f5f5
-          border-right: 1px solid #f5f5f5
+          background #f5f5f5
+          border-right 1px solid #f5f5f5
 
         &.ac-tab-bar-active
-          background: #fff
-          border-right: 1px solid #fff
+          background #fff
+          border-right 1px solid #fff
 
         .ac-tab-bar-close
-          margin-left: 5px
+          margin-left 5px
 
     .ac-tab-bar-tools
-      display: flex
-      align-items: center
-      position: absolute
-      right: 0
-      top: 0
-      height: 100%
-      background: #eee
+      display flex
+      align-items center
+      position absolute
+      right 0
+      top 0
+      height 100%
+      background #eee
 
       .ac-tab-bar-item
-        display: flex
-        align-items: center
-        padding: 10px
-        height: 100%
-        cursor: pointer
+        display flex
+        align-items center
+        padding 10px
+        height 100%
+        cursor pointer
 
         &:hover
-          background: #fff
+          background #fff
 </style>

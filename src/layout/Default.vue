@@ -5,7 +5,7 @@
       <MainMenuMini v-if="$store.state.ui.sidebar.fold"></MainMenuMini>
       <CMainMenu v-else></CMainMenu>
     </CSidebar>
-    <div class="is-flex is-auto is-vertical">
+    <div class="ac-layout-right is-flex is-auto is-vertical">
       <CHeader></CHeader>
       <CTabBar></CTabBar>
       <div class="has-padding ac-router-view">
@@ -48,4 +48,7 @@ export default {
   flex auto
   height 0
   overflow auto
+
+.ac-layout-right
+  width 0
 </style>
