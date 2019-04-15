@@ -8,8 +8,9 @@ Admincraft.use(Vue => {
 })
 let el = document.createElement('div')
 document.body.appendChild(el)
-new Admincraft({
+let app = new Admincraft({
   logo: {
+    image: '',
     text: 'Admincraft-UI'
   },
   title: '行业应用'

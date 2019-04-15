@@ -1,5 +1,5 @@
 <template>
-  <div class="is-flex">
+  <div class="ac-layout is-flex">
     <CSidebar>
       <AcLogo></AcLogo>
       <MainMenuMini v-if="$store.state.ui.sidebar.fold"></MainMenuMini>
@@ -9,7 +9,7 @@
       <CHeader></CHeader>
       <CTabBar></CTabBar>
       <div class="has-padding ac-router-view">
-        <router-view class="has-padding"></router-view>
+        <router-view></router-view>
       </div>
       <CFooter></CFooter>
       <CNoticeCenter></CNoticeCenter>
@@ -44,6 +44,8 @@ export default {
 }
 </script>
 <style lang="stylus">
+.ac-layout
+  color black
 .ac-router-view
   flex auto
   height 0

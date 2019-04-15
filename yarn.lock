@@ -1706,6 +1706,19 @@ admincraft@^0.5.4-alpha:
     vue-router "^3.0.2"
     vuex "^3.1.0"
 
+admincraft@^0.5.6-alpha:
+  version "0.5.6-alpha"
+  resolved "https://registry.yarnpkg.com/admincraft/-/admincraft-0.5.6-alpha.tgz#21c089cf9f6c0faa3ddf56a171aa3b9d178a3e83"
+  integrity sha512-GOpbZBa0gkwP6sXESprUqZFQ/5yPLKacq27bzSNvld+fhPYlcToPsZo2eYUly3YnceNond7UMqMvUFEknYfbyQ==
+  dependencies:
+    "@babel/polyfill" "^7.4.3"
+    axios "^0.18.0"
+    better-scroll "^1.15.0"
+    vue "^2.6.9"
+    vue-meta "^1.5.8"
+    vue-router "^3.0.2"
+    vuex "^3.1.0"
+
 agentkeepalive@^2.2.0:
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/agentkeepalive/-/agentkeepalive-2.2.0.tgz#c5d1bd4b129008f1163f236f86e5faea2026e2ef"
