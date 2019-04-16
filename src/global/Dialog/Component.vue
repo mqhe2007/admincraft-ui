@@ -1,14 +1,12 @@
 <template>
-  <div class="dialog boxShadow">
-    <div class="top">
-      <span class="title">{{title}}</span>
-      <svg class="icon"
-           @click="close"
-           aria-hidden="true">
-        <use xlink:href="#icon-delete"></use>
-      </svg>
+  <div class="ac-dialog is-flex is-vertical has-shadow">
+    <div class="is-flex is-between is-center has-padding">
+      <span class="ac-dialog-title">{{title}}</span>
+      <fa-icon class="is-pointer"
+               icon="times"
+               @click="close"></fa-icon>
     </div>
-    <div class="content">
+    <div class="has-padding">
       <component :is="{render}"></component>
     </div>
 
@@ -41,39 +39,24 @@ export default {
 <style lang="stylus">
 @keyframes zoomIn
   from
-    transform: scale3d(0, 0, 0) translate3d(50%, -50%, 0)
+    transform scale3d(0, 0, 0) translate3d(50%, -50%, 0)
 
   to
-    transform: scale3d(1, 1, 1) translate3d(50%, -50%, 0)
+    transform scale3d(1, 1, 1) translate3d(50%, -50%, 0)
 
-.dialog
-  display: flex
-  flex-flow: column
-  position: absolute
-  top: 50%
-  right: 50%
-  transform: translate3d(50%, -50%, 0)
-  transform-origin: right top
-  z-index: 9
-  min-width: 300px
-  min-height: 130px
-  padding: 15px
-  border-radius: 4px
-  background: #fff
-  animation: zoomIn 0.3s
-  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.2), 0 0 100px 0 rgba(0, 0, 0, 0.2)
+.ac-dialog
+  position absolute
+  top 50%
+  right 50%
+  transform translate3d(50%, -50%, 0)
+  transform-origin right top
+  z-index 9
+  border-radius 4px
+  background #fff
+  animation zoomIn 0.3s
 
-  .top
-    display: flex
-    justify-content: space-between
-    align-items: center
-    margin-bottom: 15px
-
-  .title
-    font-size: 20px
-
-  .content
-    font-size: 14px
+  .ac-dialog-title
+    font-size 16px
 </style>
 
 

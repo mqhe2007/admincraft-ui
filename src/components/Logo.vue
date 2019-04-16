@@ -42,4 +42,5 @@ export default {
     line-height 1
     font-size 20px
     font-weight bold
+    text-align center
 </style>

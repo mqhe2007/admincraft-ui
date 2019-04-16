@@ -18,7 +18,7 @@ export default Vue => {
       noticeInstances.add(instance)
       let componentEl = instance.$mount().$el
       let top = NOTICE_INSTANCE_TOP
-      let nodeList = document.querySelectorAll('.notice')
+      let nodeList = document.querySelectorAll('.ac-notice-popup')
       for (let i = 0; i < nodeList.length; i++) {
         top += nodeList[i].offsetHeight + NOTICE_INSTANCE_TOP
       }
@@ -29,7 +29,7 @@ export default Vue => {
       vm.$destroy()
       document.body.removeChild(vm.$el)
       noticeInstances.delete(vm)
-      let nodeList = document.querySelectorAll('.notice')
+      let nodeList = document.querySelectorAll('.ac-notice-popup')
       let preNode = null
       let top = 0
       for (let i = 0; i < nodeList.length; i++) {
