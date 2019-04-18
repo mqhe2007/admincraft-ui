@@ -12,7 +12,7 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     publicPath: process.env.NODE_ENV === 'production' ? './' : '',
     library: 'ui',
-    // libraryExport: 'default',
+    libraryExport: 'default',
     libraryTarget: 'umd',
     umdNamedDefine: true
   },
