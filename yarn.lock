@@ -1667,10 +1667,10 @@ admincraft-showcase@^0.1.10:
     jquery "^3.3.1"
     prismjs "^1.16.0"
 
-admincraft@^0.8.1-alpha:
-  version "0.8.1-alpha"
-  resolved "https://registry.yarnpkg.com/admincraft/-/admincraft-0.8.1-alpha.tgz#bed6412da79a5f223b4f0351534bb58b53b89782"
-  integrity sha512-hFOUjHSwlnqEiCN1n6XRzs7/n8afscaz+EBE4X714Iv3zNMnEj7CcdjL/KhfZ35YnIsgajnA+WADEZzInT6AUg==
+admincraft@^0.8.2-alpha:
+  version "0.8.2-alpha"
+  resolved "https://registry.yarnpkg.com/admincraft/-/admincraft-0.8.2-alpha.tgz#675d871febac45731003c106467805aea23419b7"
+  integrity sha512-+Y8u2APsO8PJy7/BoUeHfnrbNb6KnGFjzIslVNKOxeugvxWhVF+/DKQe4Nw9aGbtXcB611rpIxMLV4iP5zNIKQ==
   dependencies:
     "@babel/polyfill" "^7.4.3"
     axios "^0.18.0"
