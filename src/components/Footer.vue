@@ -8,7 +8,7 @@ export default {
   name: 'c-footer',
   computed: {
     title() {
-      return this.$store.state.app.options.title || require('@root/package.json').name
+      return this.$store.state.app.config.title || require('@root/package.json').name
     }
   }
 }

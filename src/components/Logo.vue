@@ -16,10 +16,10 @@ export default {
   name: 'logo',
   computed: {
     image() {
-      return this.$store.state.app.options.logo.image
+      return this.$store.state.app.config.logo.image
     },
     text() {
-      return this.$store.state.app.options.logo.text
+      return this.$store.state.app.config.logo.text
     }
   },
   methods: {

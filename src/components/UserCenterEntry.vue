@@ -3,12 +3,12 @@
   <div class="userCenterEntry">
     <div class="is-flex is-center">
       <span class="avatar has-margin and-mini and-horizontal"
-            v-if="$store.state.user.info.avatar"
-            :style="{backgroundImage: `url(${$store.state.user.info.avatar})`}"></span>
+            v-if="$store.state.ui.user.info.avatar"
+            :style="{backgroundImage: `url(${$store.state.ui.user.info.avatar})`}"></span>
       <fa-icon class="icon has-margin and-mini and-horizontal"
                v-else
                icon="user-circle" />
-      <p class="has-margin and-mini and-horizontal">{{$store.state.user.info.userName}}</p>
+      <p class="has-margin and-mini and-horizontal">{{$store.state.ui.user.info.userName}}</p>
       <fa-icon class="has-margin and-mini and-horizontal"
                icon="chevron-down" />
     </div>

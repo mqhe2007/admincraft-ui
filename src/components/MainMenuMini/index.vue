@@ -2,8 +2,8 @@
   <div class="ac-mainmenu-mini"
        ref="mainMenu">
     <div class="ac-mainmenu-mini-wrapper"
-         v-if="$store.state.mainMenu.menus.length > 0">
-      <div v-for="(item, index) in $store.state.mainMenu.menus"
+         v-if="$store.state.ui.mainMenu.menus.length > 0">
+      <div v-for="(item, index) in $store.state.ui.mainMenu.menus"
            :key="index">
         <Tooltip :content="item.title"
                  transfer
@@ -72,7 +72,7 @@ export default {
       },
       immediate: true
     },
-    '$store.state.mainMenu.menus': {
+    '$store.state.ui.mainMenu.menus': {
       handler() {
         if (this.scroll) this.scroll.refresh()
       },
@@ -103,10 +103,10 @@ export default {
       this.active(this.$route.name)
     },
     active(name) {
-      this.$store.commit('mainMenu/active', name)
+      this.$store.commit('ui/mainMenu/active', name)
     },
     resetActivation() {
-      this.$store.commit('mainMenu/resetActivation')
+      this.$store.commit('ui/mainMenu/resetActivation')
     }
   }
 }

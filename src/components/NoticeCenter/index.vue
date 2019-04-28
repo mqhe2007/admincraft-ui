@@ -1,7 +1,7 @@
 <template>
   <div class="noticeCenter"
        ref="noticeCenter"
-       v-show="$store.state.noticeCenter.visible">
+       v-show="$store.state.ui.noticeCenter.visible">
     <div class="header">
       <p class="title">消息中心</p>
       <span class="clean"
@@ -12,7 +12,7 @@
       <div class="content">
         <div class="noticeItem"
              ref="noticeItem"
-             v-for="(item, index) in $store.state.noticeCenter.list"
+             v-for="(item, index) in $store.state.ui.noticeCenter.list"
              :key="item.text">
           <div class="metaBar">
             <span class="time">{{item.title}}</span>
@@ -42,7 +42,7 @@ export default {
     }
   },
   watch: {
-    '$store.state.noticeCenter.visible'(value) {
+    '$store.state.ui.noticeCenter.visible'(value) {
       if (value) {
         document.addEventListener('click', this.listenClick, true)
         this.$nextTick(() => {
@@ -62,7 +62,7 @@ export default {
     }
   },
   beforeCreate() {
-    // this.$dynamicComponent.add('HEADER_RIGHT_MENUS', Entrance)
+    this.$dynamicComponent.add('HEADER_RIGHT_MENUS', Entrance)
   },
   methods: {
     listenClick(e) {
@@ -71,13 +71,13 @@ export default {
       }
     },
     close() {
-      this.$store.commit('noticeCenter/setVisible', false)
+      this.$store.commit('ui/noticeCenter/setVisible', false)
     },
     deleteItem(index) {
-      this.$store.commit('noticeCenter/deleteItem', index)
+      this.$store.commit('ui/noticeCenter/deleteItem', index)
     },
     clearAll() {
-      this.$store.commit('noticeCenter/clean', this.close)
+      this.$store.commit('ui/noticeCenter/clean', this.close)
       this.$eventBus.emit('NOTICE_CENTER_CLEAN_ALL')
     }
   }

@@ -37,10 +37,10 @@ export default {
   },
   computed: {
     loading() {
-      return this.$store.state.tabBar.loading
+      return this.$store.state.ui.tabBar.loading
     },
     tabs() {
-      return this.$store.state.tabBar.tabs
+      return this.$store.state.ui.tabBar.tabs
     }
   },
   watch: {
@@ -50,7 +50,7 @@ export default {
         if (!route.matched[0]) return
         if (route.matched[0].meta.NonTab) return
         route.active = true
-        this.$store.commit('tabBar/addTab', route)
+        this.$store.commit('ui/tabBar/addTab', route)
       },
       immediate: true
     },
@@ -94,20 +94,20 @@ export default {
           this.toRouter(this.tabs[deleteIndex - 1].path, route)
         }
       } else {
-        this.$store.commit('tabBar/deleteTab', route)
+        this.$store.commit('ui/tabBar/deleteTab', route)
       }
     },
     toRouter(routePath, deleteRoute) {
       this.$router.push({ path: routePath }, () => {
         if (deleteRoute) {
-          this.$store.commit('tabBar/deleteTab', deleteRoute)
+          this.$store.commit('ui/tabBar/deleteTab', deleteRoute)
         }
       })
     },
     clearTabs() {
       if (this.tabs.length === 1 && this.tabs[0].name === 'home')
         return alert('没有可清空的内容。')
-      this.$store.commit('tabBar/clearTabs')
+      this.$store.commit('ui/tabBar/clearTabs')
       this.$router.push('/')
     }
   }

@@ -49,7 +49,7 @@ export default {
   },
   computed: {
     permissions() {
-      return store.state.permission.all
+      return store.state.ui.user.permissionTags
     }
   },
   created() {

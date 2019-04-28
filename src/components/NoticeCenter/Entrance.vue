@@ -12,12 +12,12 @@ export default {
   data: () => ({}),
   computed: {
     badgeNum() {
-      return this.$store.state.noticeCenter.list.length
+      return this.$store.state.ui.noticeCenter.list.length
     }
   },
   methods: {
     visible(value) {
-      this.$store.commit('noticeCenter/setVisible', value)
+      this.$store.commit('ui/noticeCenter/setVisible', value)
     }
   }
 }

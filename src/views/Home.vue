@@ -15,7 +15,7 @@ export default {
   },
   computed: {
     componentName() {
-      return this.$store.state.app.homeRouteName
+      return this.$store.state.ui.homepage
     }
   },
   created() {

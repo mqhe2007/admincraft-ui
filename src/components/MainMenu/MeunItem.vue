@@ -34,12 +34,12 @@ export default {
     clickTitle() {
       if (this.itemData.children && this.itemData.children.length > 0) {
         if (!this.itemData.active) {
-          this.$store.commit('mainMenu/resetActivation')
-          this.$store.commit('mainMenu/active', this.itemData.name)
+          this.$store.commit('ui/mainMenu/resetActivation')
+          this.$store.commit('ui/mainMenu/active', this.itemData.name)
           // 复显当前路由
           this.itemData.children.forEach(item => {
             if (item.name === this.$route.name) {
-              this.$store.commit('mainMenu/active', this.$route.name)
+              this.$store.commit('ui/mainMenu/active', this.$route.name)
             }
           })
         } else {
