@@ -2,11 +2,19 @@ const path = require('path')
 const VueLoaderPlugin = require('vue-loader/lib/plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const CleanWebpackPlugin = require('clean-webpack-plugin')
+
+const dynamicPlugins = []
+if (process.env.NODE_ENV === 'development') {
+  dynamicPlugins.push(
+    new HtmlWebpackPlugin({
+      title: '加载中……',
+      template: 'dev/index.html'
+    })
+  )
+}
 module.exports = {
   entry:
-    process.env.NODE_ENV === 'production'
-      ? './src/index.js'
-      : './dev/main.js',
+    process.env.NODE_ENV === 'production' ? './src/index.js' : './dev/main.js',
   output: {
     filename: 'main.js',
     path: path.resolve(__dirname, 'dist'),
@@ -74,12 +82,5 @@ module.exports = {
       }
     ]
   },
-  plugins: [
-    new CleanWebpackPlugin(),
-    new VueLoaderPlugin(),
-    new HtmlWebpackPlugin({
-      title: '加载中……',
-      template: 'dev/index.html'
-    })
-  ]
+  plugins: [new CleanWebpackPlugin(), new VueLoaderPlugin(), ...dynamicPlugins]
 }
