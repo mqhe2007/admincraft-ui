@@ -1,6 +1,7 @@
 {
   "name": "admincraft-ui",
-  "version": "0.2.0-alpha",
+  "version": "0.3.0",
+  "private": false,
   "description": "UI components for Admincraft.",
   "author": "mqhe2007 <122274389@qq.com>",
   "homepage": "https://mengqinghe.com",
@@ -17,6 +18,10 @@
     "type": "git",
     "url": "https://github.com/mqhe2007/admincraft-ui"
   },
+  "files": [
+    "dist",
+    "src"
+  ],
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build --target lib src/module.js"
