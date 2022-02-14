@@ -1,20 +1,15 @@
 <template>
-  <div class="ac-menu-item"
-       :class="{'ac-menu-item-end': isEnd, 'ac-menu-item-active': itemData.active}">
-    <div class="ac-menu-item-title"
-         @click="clickTitle">
-      <fa-icon :icon="itemData.icon ? itemData.icon : 'certificate'"
-            class="ac-menu-item-icon"></fa-icon>
-      <span class="ac-menu-item-text">{{itemData.title}}</span>
-      <fa-icon v-if="!isEnd"
-            icon="chevron-down"
-            class="ac-menu-item-indicator" />
+  <div
+    class="ac-menu-item"
+    :class="{ 'ac-menu-item-end': isEnd, 'ac-menu-item-active': itemData.active }"
+  >
+    <div class="ac-menu-item-title" @click="clickTitle">
+      <fa-icon :icon="itemData.icon ? itemData.icon : 'certificate'" class="ac-menu-item-icon"></fa-icon>
+      <span class="ac-menu-item-text">{{ itemData.title }}</span>
+      <fa-icon v-if="!isEnd" icon="chevron-down" class="ac-menu-item-indicator" />
     </div>
-    <div v-if="!isEnd"
-         class="ac-menu-item-submenu">
-      <CMenuItem v-for="(item, index) in itemData.children"
-                 :key="index"
-                 :itemData="item"></CMenuItem>
+    <div v-if="!isEnd" class="ac-menu-item-submenu">
+      <CMenuItem v-for="(item, index) in itemData.children" :key="index" :itemData="item"></CMenuItem>
     </div>
   </div>
 </template>
@@ -86,10 +81,10 @@ export default {
     display none
 
   &:hover
-    background darken(primary, 5%)
+    background darken(#1565c0, 5%)
 
   &.ac-menu-item-active
-    background darken(primary, 10%)
+    background darken(#1565c0, 10%)
 
     .ac-menu-item-title
       color #fff
@@ -102,7 +97,7 @@ export default {
 
       .ac-menu-item
         &:hover
-          background darken(primary, 15%)
+          background darken(#1565c0, 15%)
 
       .ac-menu-item-title
         color #fff
@@ -110,6 +105,5 @@ export default {
   &.ac-menu-item-end.ac-menu-item-active
     .ac-menu-item-title
       background #fff
-      color primary
+      color #1565c0
 </style>
-

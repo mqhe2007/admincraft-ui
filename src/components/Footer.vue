@@ -1,6 +1,6 @@
 <template>
   <div class="ac-footer">
-    <p class="copyright">{{title + ' 由 Admincraft 驱动'}}</p>
+    <p class="copyright">{{ title + ' 由 Admincraft 驱动' }}</p>
   </div>
 </template>
 <script>
@@ -8,7 +8,7 @@ export default {
   name: 'c-footer',
   computed: {
     title() {
-      return this.$store.state.app.config.title || require('@root/package.json').name
+      return this.$store.state.app.config.title || require('../../package.json').name
     }
   }
 }

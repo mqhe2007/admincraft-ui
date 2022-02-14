@@ -1,34 +1,28 @@
 <template>
-  <div class="noticeCenter"
-       ref="noticeCenter"
-       v-show="$store.state.ui.noticeCenter.visible">
+  <div class="noticeCenter" ref="noticeCenter" v-show="$store.state.ui.noticeCenter.visible">
     <div class="header">
       <p class="title">消息中心</p>
-      <span class="clean"
-            @click="clearAll">清除全部</span>
+      <span class="clean" @click="clearAll">清除全部</span>
     </div>
-    <div class="body"
-         ref="scrollWrapper">
+    <div class="body" ref="scrollWrapper">
       <div class="content">
-        <div class="noticeItem"
-             ref="noticeItem"
-             v-for="(item, index) in $store.state.ui.noticeCenter.list"
-             :key="item.text">
+        <div
+          class="noticeItem"
+          ref="noticeItem"
+          v-for="(item, index) in $store.state.ui.noticeCenter.list"
+          :key="item.text"
+        >
           <div class="metaBar">
-            <span class="time">{{item.title}}</span>
-            <span :size="15"
-                  class="deleteBtn"
-                  @click="deleteItem(index)">
-              <svg class="icon"
-                   aria-hidden="true">
-                <use xlink:href="#icon-delete"></use>
+            <span class="time">{{ item.title }}</span>
+            <span :size="15" class="deleteBtn" @click="deleteItem(index)">
+              <svg class="icon" aria-hidden="true">
+                <use xlink:href="#icon-delete" />
               </svg>
             </span>
           </div>
-          <div class="content">{{item.content}}</div>
+          <div class="content">{{ item.content }}</div>
         </div>
       </div>
-
     </div>
   </div>
 </template>
@@ -62,7 +56,7 @@ export default {
     }
   },
   beforeCreate() {
-    this.$dynamicComponent.add('HEADER_RIGHT_MENUS', Entrance)
+    this.$dynamicComponent.add(Entrance, 'HEADER_RIGHT_MENUS')
   },
   methods: {
     listenClick(e) {

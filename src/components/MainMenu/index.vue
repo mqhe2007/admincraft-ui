@@ -1,18 +1,14 @@
 <template>
-  <div class="ac-menu"
-       ref="mainMenu">
-    <div class="ac-menu-wrapper"
-         v-if="$store.state.ui.mainMenu.menus.length > 0">
-      <CMenuItem v-for="(item, index) in $store.state.ui.mainMenu.menus"
-                 :key="index"
-                 :itemData="item"></CMenuItem>
+  <div class="ac-menu" ref="mainMenu">
+    <div class="ac-menu-wrapper" v-if="$store.state.ui.mainMenu.menus.length > 0">
+      <CMenuItem
+        v-for="(item, index) in $store.state.ui.mainMenu.menus"
+        :key="index"
+        :itemData="item"
+      ></CMenuItem>
     </div>
-    <div class="ac-menu-empty"
-         v-else>
-      菜单未配置
-    </div>
+    <div class="ac-menu-empty" v-else>菜单未配置</div>
   </div>
-
 </template>
 <script>
 import CMenuItem from './MeunItem'
@@ -41,7 +37,7 @@ export default {
       immediate: true
     }
   },
-  created() {},
+  created() { },
   mounted() {
     this.$nextTick(() => {
       this.scroll = new this.$Scroll(this.$refs.mainMenu, {
@@ -69,7 +65,7 @@ export default {
   height: 100%
   padding-top: 35px
   overflow: hidden
-  background: primary
+  background: #1565c0
 
   .ac-menu-empty
     text-align: center

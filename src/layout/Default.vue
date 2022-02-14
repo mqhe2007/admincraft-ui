@@ -45,7 +45,7 @@ export default {
 </script>
 <style lang="stylus">
 .ac-layout
-  color black
+  color #555
 .ac-router-view
   flex auto
   height 0
